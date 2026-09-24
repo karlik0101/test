@@ -284,6 +284,37 @@
             display: block;
         }
 
+        .intro-title {
+            word-break: keep-all;
+        }
+
+        .intro-title .sub-title {
+            display: inline-block;
+            word-break: keep-all;
+            max-width: 100%;
+        }
+
+        .intro-desc {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 3rem;
+            word-break: keep-all;
+            line-height: 1.8;
+        }
+
+        .keep-phrase {
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .intro-title {
+                font-size: 1.35rem;
+            }
+            .intro-desc {
+                font-size: 0.95rem;
+            }
+        }
+
         @media (max-width: 600px) {
             body {
                 font-size: 1rem;
@@ -347,9 +378,12 @@
     <main>
         <div class="container">
             <div class="phase-section" data-phase="1">
-                <h1><span>델타룬 8주년 기념 인터뷰</span>1부 - Dtkrpatchteam 인터뷰</h1>
-                
-                <p style="text-align: center; color: #9ca3af; margin-bottom: 3rem;">
+                <h1 style="word-break: keep-all;">
+                    <span>델타룬 8주년 기념 인터뷰</span>
+                    1부 - Dtkrpatchteam 인터뷰
+                </h1>
+
+                <p style="text-align: center; color: #9ca3af; margin-bottom: 3rem; word-break: keep-all;">
                     델타룬 챕터 3~5 한글패치를 제작하신 분들을 모셨습니다!<br>
                     인터뷰에 참여해주신 분들께 감사를 표합니다!
                 </p>
@@ -408,7 +442,7 @@
 
                 <div class="chat-block">
                     <div class="chat-content text-kalik">
-                        <p><strong class="name-kalik">Q:</strong> 방금 코드 얘기가 나와서 말인데, 번역과 기술을 총괄하시면서 델타룬의 내부 구조를 샅샅이 뜯어보셨잖아요. 작업하시면서 토비폭스에게 화가 났던(?) 부분이라던가, 머리를 쥐어뜯게 만들었던 한글패치 버그가 있었다면 썰 좀 풀어주실 수 있나요?</p>
+                        <p><strong class="name-kalik">Q:</strong> 방금 코드 얘기가 나와서 말인데, 번역과 기술을 총괄하시면서 델타룬의 내부 구조를 샅샅이 뜯어보셨잖아요. 작업하시면서 토비폭스에게 화가 났던 부분이라던가, 머리를 쥐어뜯게 만들었던 한글패치 버그가 있었다면 썰 좀 풀어주실 수 있나요?</p>
                     </div>
                 </div>
 
@@ -464,7 +498,7 @@
                         <p><strong class="name-speaker">동명:</strong> 디스코드 통화로 디렉팅을 받으며 녹음했는데, "눤 영웅위야~" 하고 대놓고 비꼬는 톤으로 연기해달라는 요청을 받았을 때는 조금 당황하기도 했습니다 ㅋㅋㅋ 더빙 대사들도 약 100개인 만큼 전후 상황을 정확히는 모르다 보니 원작의 토비 폭스 님 목소리가 화난 건지 기쁜 건지 헷갈릴 때도 있었지만, 최대한 원본의 느낌을 살리려고 노력했습니다.</p>
                         <div class="pixel-audio-box">
                             <audio id="flowey-voice" src="./assets/media/snd_flowery_voiceclip_youre_a_hero_ko.wav" onended="this.nextElementSibling.querySelector('.voice-btn-text').innerText='&quot;넌 영웅이야~&quot;'; this.nextElementSibling.querySelector('.voice-btn-icon').innerText='▶';"></audio>
-                            <button type="button" class="pixel-audio-btn" onclick="const a=this.previousElementSibling; if(a.paused){a.currentTime=0; a.play(); this.querySelector('.voice-btn-text').innerText='정지'; this.querySelector('.voice-btn-icon').innerText='■';}else{a.pause(); a.currentTime=0; this.querySelector('.voice-btn-text').innerText='음성 듣기: &quot;눤 영웅위야~&quot;'; this.querySelector('.voice-btn-icon').innerText='▶';}">
+                            <button type="button" class="pixel-audio-btn" onclick="const a=this.previousElementSibling; if(a.paused){a.currentTime=0; a.play(); this.querySelector('.voice-btn-text').innerText='정지'; this.querySelector('.voice-btn-icon').innerText='■';}else{a.pause(); a.currentTime=0; this.querySelector('.voice-btn-text').innerText='음성 듣기: &quot;넌 영웅이야~&quot;'; this.querySelector('.voice-btn-icon').innerText='▶';}">
                                 <span class="voice-btn-icon">▶</span> <span class="voice-btn-text">넌 영웅이야~</span>
                             </button>
                         </div>
@@ -476,6 +510,12 @@
                     <div class="chat-content">
                         <p><strong class="name-speaker">외정대:</strong> 성우 얘기 하니까 생각나는데, 저도 처음엔 테나를 맡을 줄 알았어요 <img src="./assets/images/brulosweat.webp" class="custom-emoji" alt="sweat"> 수락하자마자 샘플 영상을 보내셨거든요!</p>
                         <p>근데 저는 오히려 잭켄슈타인을 맡은 게 더 다행이라고 생각합니다. '테나와 잭켄슈타인 둘 중에 어떤 캐릭터가 내 목소리에 어울릴까?'를 생각해보면 잭켄이 어울린다! 생각하거든요! 그리고 주연급의 티비 진행자인 테나를 맡기에는 긴장되기도 하고요...! 아, 그리고 이때 챕터 4를 스포 당했습니다. 그 당시에는 군입대를 서서히 기다리는 마지막 불꽃의 시기였습니다...!</p>
+                        <div class="pixel-audio-box">
+                            <audio id="jackenstein-voice" src="./assets/media/snd_taking_too_long_kr.wav" onended="this.nextElementSibling.querySelector('.voice-btn-text').innerText='&quot;너무 오래 걸려&quot;'; this.nextElementSibling.querySelector('.voice-btn-icon').innerText='▶';"></audio>
+                            <button type="button" class="pixel-audio-btn" onclick="const a=this.previousElementSibling; if(a.paused){a.currentTime=0; a.play(); this.querySelector('.voice-btn-text').innerText='정지'; this.querySelector('.voice-btn-icon').innerText='■';}else{a.pause(); a.currentTime=0; this.querySelector('.voice-btn-text').innerText='음성 듣기: &quot;너무 오래 걸려&quot;'; this.querySelector('.voice-btn-icon').innerText='▶';}">
+                                <span class="voice-btn-icon">▶</span> <span class="voice-btn-text">너무 오래 걸려</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -817,7 +857,7 @@
                 isPlaying = !isPlaying;
                 
                 if (isPlaying) {
-                    bgmBtn.innerText = "⏸ BGM 끄기";
+                    bgmBtn.innerText = "■ BGM 끄기";
                     const t = tracks[currentPhase];
                     activeAudio = document.getElementById(t.id);
                     bgmTrackText.innerText = "♪ " + t.name;
