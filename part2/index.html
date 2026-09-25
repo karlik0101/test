@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <base href="../">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>델타룬 8주년 기념 인터뷰 - 2부 미니오 인터뷰</title>
+    <link rel="icon" type="image/png" href="./assets/images/icon.png">
+    
+    <style>
+        .roster-container {
+            margin: 0 auto 5rem auto;
+            padding: 2rem 0;
+            border-top: 1px solid #374151;
+            border-bottom: 1px solid #374151;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem 3rem;
+            justify-content: center;
+        }
+        .roster-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .roster-name {
+            color: #d1d5db;
+            font-size: 1rem;
+        }
+        .roster-role {
+            color: #6b7280;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .role-text {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-left: 0.4rem;
+            margin-right: 0.1rem;
+            font-weight: normal;
+            vertical-align: baseline;
+            letter-spacing: -0.02em;
+        }
+        
+        .role-text::before { content: "["; color: #4b5563; margin-right: 0.2rem; }
+        .role-text::after { content: "]"; color: #4b5563; margin-left: 0.2rem; }
+        
+        @font-face {
+            font-family: 'Galmuri9';
+            src: url('./assets/Galmuri9.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mona12ColorEmoji';
+            src: url('./assets/Mona12ColorEmoji.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #000000;
+            color: #d1d5db;
+            font-family: 'Galmuri9', 'Mona12ColorEmoji', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 2;
+            font-size: 1.125rem;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 70ch;
+            margin: 0 auto;
+            padding: 40px 20px 100px 20px;
+        }
+
+        h1 {
+            color: #fde047;
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+            font-weight: normal;
+        }
+        h1 span {
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-divider {
+            text-align: center;
+            color: #4b5563;
+            margin: 4rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+        }
+
+        .chat-block {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            word-break: keep-all;
+        }
+
+        .avatar {
+            width: 48px;
+            height: auto;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+            border-radius: 4px; /* 프사 둥근 테두리 필요시 */
+        }
+
+        .chat-content {
+            flex: 1;
+            min-width: 0;
+        }
+        .chat-content p {
+            margin: 0 0 1rem 0;
+        }
+        .chat-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .name-kalik { color: #fde047; font-weight: normal; }
+        .text-kalik { color: #fef08a; }
+        .name-speaker { color: #9ca3af; font-weight: normal; }
+
+        .custom-emoji {
+            height: 1.5em;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .custom-emoji-large {
+            height: 3.5em;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .content-img, .screenshot-img, .img-grid-4 img, .img-flex-row img {
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: contain;
+        }
+
+        .content-img {
+            display: block;
+            margin: 2rem auto;
+            image-rendering: pixelated;
+        }
+
+        .screenshot-img {
+            image-rendering: auto !important;
+            border-radius: 6px;
+        }
+
+        .img-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .img-grid-4 img {
+            display: block;
+            image-rendering: pixelated;
+        }
+
+        .img-flex-row {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            justify-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        .img-flex-row > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+        .img-flex-row img {
+            display: block;
+            image-rendering: pixelated;
+            margin-bottom: 0.5rem;
+        }
+
+        .caption {
+            color: #6b7280;
+            font-size: 0.9rem;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        .pixel-audio-box {
+            margin-top: 1.25rem;
+            display: inline-block;
+        }
+
+        .pixel-audio-btn {
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            font-family: 'Galmuri9', sans-serif;
+            font-size: 0.95rem;
+            padding: 8px 14px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 3px 3px 0px #4b5563;
+            transition: none;
+            outline: none;
+            user-select: none;
+        }
+
+        .pixel-audio-btn:hover {
+            color: #fde047;
+            border-color: #fde047;
+            box-shadow: 3px 3px 0px #fde047;
+        }
+
+        .pixel-audio-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #fde047;
+        }
+
+        .voice-btn-icon {
+            font-size: 0.8rem;
+        }
+
+        .bgm-control {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid #374151;
+            padding: 12px 16px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+        .bgm-btn {
+            background: none;
+            border: none;
+            color: #fde047;
+            font-family: 'Galmuri9', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .bgm-btn:hover {
+            color: #fef08a;
+        }
+        .bgm-track {
+            color: #9ca3af;
+            font-size: 0.75rem;
+            max-width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .phase-section {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 3.5rem;
+            }
+            h1 span {
+                font-size: 1rem;
+            }
+            .roster-container {
+                gap: 1.5rem 1rem;
+            }
+            .chat-block {
+                flex-direction: column;
+                margin-bottom: 2.5rem;
+            }
+            .avatar {
+                margin-bottom: 0.75rem;
+                width: 40px;
+            }
+            .img-grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .img-flex-row {
+                flex-direction: column;
+                align-items: center !important;
+            }
+            .img-flex-row > div {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .bgm-control {
+                bottom: 16px;
+                right: 16px;
+                padding: 10px 12px;
+            }
+            .bgm-btn {
+                font-size: 0.9rem;
+            }
+            .section-divider {
+                margin: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgm-1" src="./assets/media/MIKE_the_BOARD_please.mp3" loop></audio>
+
+    <div class="bgm-control">
+        <button id="bgm-btn" class="bgm-btn">▶ BGM 켜기</button>
+        <div id="bgm-track" class="bgm-track">BGM OFF</div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="phase-section" data-phase="1">
+                <h1 style="word-break: keep-all;">
+                    <span>델타룬 8주년 기념 인터뷰</span>
+                    2부 - 미니오 인터뷰
+                </h1>
+
+                <p style="text-align: center; color: #9ca3af; margin-bottom: 3rem; word-break: keep-all;">
+                    언더테일 1.08 버전을 한국어로 즐길 수 있게 힘써주신<br>
+                    '한패 깎는 청년' 미니오님을 모셨습니다!
+                </p>
+
+                <!-- Q1 -->
+                <div class="chat-block">
+                    <div class="chat-content text-kalik">
+                        <p><strong class="name-kalik">Q:</strong> 혼자서 1.08 한글패치 유지보수를 총대 메고 시작하시게 된 계기가 궁금합니다.</p>
+                    </div>
+                </div>
+
+                <div class="chat-block">
+                    <img src="./assets/images/profiles/미니오.png" class="avatar" alt="미니오">
+                    <div class="chat-content">
+                        <p><strong class="name-speaker">미니오:</strong> 아이고 안녕하십니까 한패 깎는 청년 미니오입니다.</p>
+                        <p>팀 왈도의 한국어 패치는 높은 퀄리티와 훌륭한 번역 센스로 한국 언델타룬 팬덤의 토대 그 자체가 되었고, 토비 폭스, 테미 창, 클라이드 맨덜린 등 언더테일의 주요 관계자들에게 샷아웃도 받은 매우 상징적인 번역판입니다.</p>
+                        <p>다만 아시다시피, 패치의 유지 보수가 끊기면서 한국 팬덤이 반강제로 5차례에 걸친 버전업(v1.01→v1.08)의 이점을 누리지 못하게 되는 문제가 생겼습니다.</p>
+                        <p>그리고 언델타룬 로어에 대한 이해와 팬덤의 모딩 노하우가 나날이 깊어지고 또 공식 일본어판이 출시되면서, 기존 한국어판에서 개선해야 하거나 개선할 수 있게 된 부분이 많이 나타나게 되었죠.<br>(그리고 솔직히 순전히 오역이 많았습니다)</p>
+                        <p>그래서 새로운 한국어 패치가 필요하겠다고 판단했습니다.</p>
+                        <p>사실 처음에는 (후술할 기술적 애로사항도 있었고) 개인적인 야망(?) 때문에 "나 혼자 힘으로 몇 달이 걸리든 몇 년이 걸리든 완전히 새로운 번역판을 만들어보자!"는 게 목표였습니다.</p>
+                        <p>근데 더딘 진척 속에 (후술할 기술적 애로사항이 해결되기도 했고) 어느덧 언더테일 10주년이 다가오고 있었고, 델타룬의 새 챕터가 공개되면서 자연스럽게 언더테일에 대한 한국 게이머계의 관심이 환기되고 있었기 때문에 최신 패치의 공개를 서두를 필요가 생겼습니다.</p>
+                        <p>그래서 그냥 팀 왈도의 번역을 그대로 이식하고 핵심적인 부분만 개선 및 검수하여 배포하는 방향으로 선회하게 된 겁니다.</p>
+                        <p>제가 이 작업을 거저 하게 된 이유는 간단합니다.</p>
+                        <p>제가 언델타룬을 즐겁게 플레이했고, 다른 분들도 가능한 한 즐겁게 플레이하시길 바랐고, 아무도 안 하고 있던 이 작업을 제가 할 수 있었기 때문입니다.</p>
+                    </div>
+                </div>
+
+                <div class="section-divider">* * *</div>
+
+                <!-- Q2 -->
+                <div class="chat-block">
+                    <div class="chat-content text-kalik">
+                        <p><strong class="name-kalik">Q:</strong> 구버전 패치 데이터를 1.08 버전으로 이식하면서 겪었던 기술적 난관이나 기억에 남는 버그가 있다면요?</p>
+                    </div>
+                </div>
+
+                <div class="chat-block">
+                    <img src="./assets/images/profiles/미니오.png" class="avatar" alt="미니오">
+                    <div class="chat-content">
+                        <p><strong class="name-speaker">미니오:</strong> 언델타룬의 데이터 파일(data.win)을 모딩할 때 UndertaleModTool이라는 툴이 애용되는데요, 워낙 편리하고 기능도 좋아서 신버전에 이식하는 것(+ 약간의 프로그래밍) 자체는 수월했습니다.<br>(UnderminersTeam에게 감사를)</p>
+                        <p>진짜 문제는 그전에 기존 번역 데이터를 추출하는 작업이었죠.<br>안타깝게도 팀 왈도의 번역본은 이 툴이 등장하기 이전에 완성된지라 호환이 안 되는 게 첫 번째 난관이었습니다. 툴로 열려고 하면 오류를 뿜더라고요.</p>
+                        <p>결국 딸깍해서 뜯는 걸 포기하고 파일 바이너리를 깡으로 분석해가면서 텍스트와 이미지들을 뽑아내야 했어요.</p>
+                        <p>텍스트 적용은 직접 파이썬 코드를 하나 짜서 자동화했습니다.<br>러프하게 설명하자면 v1.01 원본과 v1.01 한국어판의 텍스트를 비교해서 차이가 있는 것들만 원문-번역문 쌍을 짓고, 그 쌍의 원문과 일치하는 v1.08의 원본 텍스트들을 번역문으로 치환하는 원리였죠.<br>그리고 원문이 개정됐거나 새로 추가된 텍스트들은 직접 번역했습니다. 1.05 버전부터는 일본어 지원 때문에 번역이 필요한 텍스트가 싹다 정돈되어 있어서 작업하기 편했습니다.</p>
+                        <p>이미지는 한땀 한땀 복붙했습니다. 얘도 자동화하려면 할 순 있었겠지만 머리 아픈 건 싫어오</p>
+                        <p>기억에 남는 버그는 사실 툴이나 게임의 버그가 아닌 제 개인적인 찐빠(?)에 가까운데요, 지금 버전에서는 다 없어진 것 같지만 한때 일부 텍스트가 같은 구간이 반복되며 깨져 있는 문제가 있었습니다.<br>"채 널  변 경"이 "채 널채 널채 널  변 경"이 되는 식으로요.</p>
+                        <p>이게 왜 이렇게 됐냐면, 잠깐 검수를 컴퓨터가 아닌 폰으로 한 적이 있는데 그때 저장 과정에서 폴라리스 오피스 앱이 버그를 일으켰더라고요.<br>근데 그때 당시에는 그걸 파악 못하고 진도를 많이 나가는 바람에, 폰 쓰기 이전 백업본부터 다시 하기도 애매해 깨진 텍스트를 일일이 찾아서 고쳐야 하는 상황이 되어버렸습니다.</p>
+                    </div>
+                </div>
+
+                <div class="section-divider">* * *</div>
+
+                <!-- Q3 -->
+                <div class="chat-block">
+                    <div class="chat-content text-kalik">
+                        <p><strong class="name-kalik">Q:</strong> 작업하시면서 겪었던 위기나 가장 기억에 남는 해프닝이 있었다면 무엇이었나요?</p>
+                    </div>
+                </div>
+
+                <div class="chat-block">
+                    <img src="./assets/images/profiles/미니오.png" class="avatar" alt="미니오">
+                    <div class="chat-content">
+                        <p><strong class="name-speaker">미니오:</strong> 1.05 버전 이후 데이터 파일은 일본어 지원을 맡은 8-4사가 로컬라이징이 용이하게끔 내부에 인프라(?)를 쫙 깔아둔 상태여서, 의외로 막 더럽게 꼬여 있다고 느껴진 적은 없었습니다.<br>(1.01 이전 구버전이었으면 좀 빡셌을지도?요)</p>
+                        <p>그래서 특별한 위기는 없었지만, 패치를 v3로 업데이트할 즈음에 결의지 논쟁과 관련된 해프닝이 하나 있긴 했습니다.</p>
+                        <p>언델갤에 올린 제 글을 읽어보셨다면 아시겠지만 저는 Determination에 대해 일단은 '의지'라는 번역을 유지하되, 여론이 바뀐다면 '결의'로 번역을 고치는 게 좋겠다는 입장입니다.</p>
+                        <p>올해 초에는 여론이 '결의' 쪽으로 충분히 기울었다는 판단이 들었고, 또 델타룬 패치가 챕터 1 이래 '결의' 번역을 유지하고 있던 시기라 슬슬 '의지'를 폐기하는 수순을 밟으려 했습니다.<br>패처 프로그램을 개량하면서 Determination 번역의 기본값을 '의지'에서 '결의'로 변경했죠.</p>
+                        <p>근데 패처 준비를 끝내고 나니까 챕터 5 한패가 나오면서 결의지 논쟁이 갑자기 활활 타기 시작하더라고요...?<br>일련의 상황들을 지켜보면서 아직 '의지'를 폐기하는 건 시기상조라고 생각을 고쳤지만, 패처를 다시 빌드하긴 귀찮아서 그냥 그대로 배포했습니다.</p>
+                    </div>
+                </div>
+
+                <div class="section-divider">* * *</div>
+
+                <!-- Q4 -->
+                <div class="chat-block">
+                    <div class="chat-content text-kalik">
+                        <p><strong class="name-kalik">Q:</strong> 델타룬 챕터 5 한패 크레딧에 성함이 오르셨던데, 번역팀과는 어떤 계기로 연이 닿으셨나요?</p>
+                    </div>
+                </div>
+
+                <div class="chat-block">
+                    <img src="./assets/images/profiles/미니오.png" class="avatar" alt="미니오">
+                    <div class="chat-content">
+                        <p><strong class="name-speaker">미니오:</strong> 제 언더테일 패치에 이름을 한글로 지을 수 있도록 한글 입력기 코드를 하나 짜서 넣었는데, dtkrpatchteam 측이 그 코드를 델타룬 챕터 5부터 적용하고 싶다고 접촉해 오셔서 허락해드린 게 전부입니다.<br>특별히 상설연락망이 있다거나 서로 의견 교환하며 조율한다거나 하는 부분은 전무합니다.<br>(제가 델타룬 패치 쪽 눈치를 보면서 제 패치에 반영하는 부분이 없진 않습니다)</p>
+                        <p>OK만 때렸을 뿐인데 훌륭한 패치의 크레딧에 오르게 되어서 감개무량할 따름이죠.</p>
+                        <p>팀원인 진윤님과는 진윤님 개인 패치 등등을 이유로 메일을 몇 번 주고받았습니다. 정구지찌짐 츄릅</p>
+                    </div>
+                </div>
+
+                <div class="section-divider">* * *</div>
+
+                <!-- Q5 -->
+                <div class="chat-block">
+                    <div class="chat-content text-kalik">
+                        <p><strong class="name-kalik">Q:</strong> 마지막으로 가장 애정하는 캐릭터 딱 하나와 함께, 남기고 싶은 말씀 자유롭게 부탁드립니다!</p>
+                    </div>
+                </div>
+
+                <div class="chat-block" style="margin-bottom: 0;">
+                    <img src="./assets/images/profiles/미니오.png" class="avatar" alt="미니오">
+                    <div class="chat-content">
+                        <p><strong class="name-speaker">미니오:</strong> 원래 잘 만들어져 있던 패치 긴빠이했을 뿐인데 응원과 칭찬도 많이 해주시고 이렇게 인터뷰도 청해주시니 황송하기 그지없습니다 ㅋㅋㅋ 다들 감사합니다</p>
+                        <p>실은 고작 이식 작업 갖고 꺼드럭거리고 싶지는 않고, 제가 처음부터 손수 제작한 한패도 언델타룬 팬들께 선보여드리고 싶어서 열심히 물색하고 준비 중에 있습니다.<br>내년 중반쯤에는 어떤 작품인지 공개할 수 있지 않을까 생각합니다! 앞으로도 잘 부탁드리겠습니다.</p>
+                        <p>최애캐: 녹핀스</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 5rem;">
+                <!-- 아래 ralsei-splat 이미지는 1부와 동일하게 유지 -->
+                <img src="./assets/images/ralsei-splat.png" style="width: 600px; height: 100px; max-width: 100%; object-fit: contain; image-rendering: pixelated;" alt="ralsei splat">
+            </div>
+
+            <footer style="text-align: center; margin-top: 3rem; font-size: 0.8rem; color: #6b7280; word-break: keep-all;">
+                <p style="margin: 0;">기획: 칼릭<br>이 사이트는 토비 폭스 및 DELTARUNE 공식과는 관련이 없는 사이트입니다.</p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tracks = {
+                1: { id: 'bgm-1', name: "MIKE, the BOARD, please!" }
+            };
+
+            let currentPhase = 1;
+            let isPlaying = false;
+            let activeAudio = null;
+
+            const bgmBtn = document.getElementById('bgm-btn');
+            const bgmTrackText = document.getElementById('bgm-track');
+            const audios = Object.values(tracks).map(t => document.getElementById(t.id));
+
+            audios.forEach(el => {
+                if(el) {
+                    el.volume = 0;
+                    el.fadeInterval = null;
+                }
+            });
+
+            function changeBGM(targetAudio) {
+                if (!isPlaying || !targetAudio) return;
+                
+                audios.forEach(audio => {
+                    if(!audio) return;
+                    clearInterval(audio.fadeInterval);
+                    if (audio === targetAudio) {
+                        audio.play().catch(e => {
+                            isPlaying = false;
+                            bgmBtn.innerText = "▶ BGM 켜기";
+                            bgmTrackText.innerText = "BGM OFF";
+                        });
+                        audio.fadeInterval = setInterval(() => {
+                            if (audio.volume < 0.45) {
+                                audio.volume += 0.05;
+                            } else {
+                                audio.volume = 0.5;
+                                clearInterval(audio.fadeInterval);
+                            }
+                        }, 50);
+                    } else {
+                        if (!audio.paused) {
+                            audio.fadeInterval = setInterval(() => {
+                                if (audio.volume > 0.05) {
+                                    audio.volume -= 0.05;
+                                } else {
+                                    audio.volume = 0;
+                                    audio.pause();
+                                    clearInterval(audio.fadeInterval);
+                                }
+                            }, 50);
+                        }
+                    }
+                });
+            }
+
+            function playPhase(phase) {
+                currentPhase = phase;
+                if (!isPlaying) return;
+
+                const nextTrack = tracks[phase];
+                if(!nextTrack) return;
+                const nextAudio = document.getElementById(nextTrack.id);
+
+                if (activeAudio === nextAudio) return;
+
+                activeAudio = nextAudio;
+                bgmTrackText.innerText = "♪ " + nextTrack.name;
+                changeBGM(nextAudio);
+            }
+
+            bgmBtn.addEventListener('click', () => {
+                isPlaying = !isPlaying;
+                
+                if (isPlaying) {
+                    bgmBtn.innerText = "■ BGM 끄기";
+                    const t = tracks[currentPhase] || tracks[1];
+                    activeAudio = document.getElementById(t.id);
+                    bgmTrackText.innerText = "♪ " + t.name;
+                    changeBGM(activeAudio);
+                } else {
+                    bgmBtn.innerText = "▶ BGM 켜기";
+                    bgmTrackText.innerText = "BGM OFF";
+                    audios.forEach(audio => {
+                        if(!audio) return;
+                        clearInterval(audio.fadeInterval);
+                        if (!audio.paused) {
+                            audio.fadeInterval = setInterval(() => {
+                                if (audio.volume > 0.05) {
+                                    audio.volume -= 0.05;
+                                } else {
+                                    audio.volume = 0;
+                                    audio.pause();
+                                    clearInterval(audio.fadeInterval);
+                                }
+                            }, 50);
+                        }
+                    });
+                    activeAudio = null;
+                }
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-30% 0px -50% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const phase = parseInt(entry.target.getAttribute('data-phase'));
+                        playPhase(phase);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.phase-section').forEach(sec => observer.observe(sec));
+        });
+    </script>
+</body>
+</html>
